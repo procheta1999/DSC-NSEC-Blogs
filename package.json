@@ -8,7 +8,16 @@
     "start": "next start"
   },
   "dependencies": {
+    "@material-ui/core": "^4.10.2",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@zeit/webpack-asset-relocator-loader": "^0.7.2",
+    "child_process": "^1.0.2",
+    "dotenv": "^8.2.0",
+    "firebase": "^7.15.5",
     "next": "9.4.4",
+    "node-firestore-import-export": "^1.1.0",
+    "now": "^19.1.1",
+    "now-secrets": "^1.0.3",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   }
