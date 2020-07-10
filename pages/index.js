@@ -5,6 +5,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import Icon from '@material-ui/core/Icon';
 import Head from 'next/head'
 import Link from 'next/link'
 export default function Home() {
@@ -12,8 +13,11 @@ export default function Home() {
     
     <div className="container">
       <Head>
+      <meta charset="UTF-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <title>DSC NSEC blogs!</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
       </Head>
 
       <main>
@@ -30,6 +34,7 @@ export default function Home() {
         <img src="/book.jpg" alt="blog" id="book" />
         <br></br>
         <img src="/create.jpg" alt="blog" id="create" />
+        
         <div className="grid">
           <a href="https://dscnsec.com/" className="card">
             <h3>About us &rarr;</h3>
@@ -40,28 +45,40 @@ export default function Home() {
             <h3>Log In &rarr;</h3>
             <p>Start your Blog Journey today!</p>
           </a></Link>
+          <br></br>
+        <br></br>
+        <br></br>
+        <div id="pr">
+        <Typography variant="h5" gutterBottom style={{ textAlign: "center" }}>
+        Follow us:
+        </Typography>
+        <Link href="https://www.facebook.com/dscnsec"><a target="_blank"><Icon className="fa fa-facebook-f" /></a></Link>
+        <Link href="https://twitter.com/dscnsec"><a target="_blank"><Icon className="fa fa-twitter" /></a></Link>
+        <Link href="https://ig.me/dscnsec"><a target="_blank"><Icon className="fa fa-instagram" /></a></Link>
+        <Link href="https://github.com/dscnsec"><a target="_blank"><Icon className="fa fa-github" /></a></Link>
         </div>
-        <script defer src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+        </div>
 
-<script defer src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
-<script defer src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
-
-// ...
-
-<script defer src="./firebase.js"></script>
       </main>
 
       <footer>
+      
         <a
           href="https://dscnsec.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/dsc.png" alt="dsc Logo" className="logo" />
+          <img src="/dsc.png" alt="dsc Logo" className="logo"  height="300px" width="100px"/>
         </a>
       </footer>
 
       <style jsx>{`
+      #pr{
+        padding:1em 1em 1em 1em;
+    }
+      #pr a {
+        margin-right: 30px;
+     } 
       #create{
         display: block;
     margin-left: auto;
