@@ -13,6 +13,8 @@ export default function FirstPost() {
   return (
     <>
        <Head>
+       <meta charset="UTF-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <title>Log In</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -31,7 +33,7 @@ export default function FirstPost() {
       <div className="card">
         Username:<TextField><input type="email"  name="e"></input></TextField><br></br><br></br>
           Password:<TextField><input type="password" name="p"></input></TextField><br></br><br></br>
-          <Button
+          <Link href="/posts/third-post"><Button
             variant="contained"
             color="primary"
             type="submit"
@@ -39,6 +41,7 @@ export default function FirstPost() {
           >
             <a>Submit</a>
           </Button>
+          </Link>
           </div>
           </div>
           <p id="new"><Link href="/posts/second-post"><a>New user?Sign up</a></Link></p>

@@ -1,23 +1,43 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
+import {createMuiTheme} from '@material-ui/core/styles'
+import ThemeProvider from '@material-ui/styles/ThemeProvider'
+import TextField from "@material-ui/core/TextField"
+import Card from '@material-ui/core/Card';
+import { makeStyles, responsiveFontSizes } from '@material-ui/core/styles';
+import Divider from '@material-ui/core/Divider';
 import AppBar from '@material-ui/core/AppBar';
+import Input from '@material-ui/core/Input';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
+import InputBase from '@material-ui/core/InputBase';
 import Box from '@material-ui/core/Box';
 import Button from "@material-ui/core/Button"
 import Head from "next/head"
 import Link from 'next/link'
+const theme = createMuiTheme({
+  form:{
+    InputBase: {
+    fontSize: 100,
+  },
+  resize:{
+    fontSize:50
+  },
+},
+});
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
   return (
     <>
     <Head>
+    <meta charset="UTF-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
      <title>DSC NSEC BLogs!</title>
      <link rel="icon" href="/favicon.ico" />
    </Head>
+   
     <div
       role="tabpanel"
       hidden={value !== index}
@@ -53,6 +73,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     width: '100%',
     backgroundColor: theme.palette.background.paper,
+fontSize:50,
   },
 }));
 
@@ -137,7 +158,48 @@ Though we hope that we never have to invoke this policy, we believe that having 
         Item Two
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <br></br>
+        <ThemeProvider theme={theme}>
+        <form>
+        <Button
+            variant="contained"
+            color="primary"
+            type="submit"
+            style={{ marginTop: "20px", width: "100px",padding:"1px 1px 1px 1px", }}
+          >
+            <a>PUBLISH</a>
+          </Button>
+          <Button
+            variant="contained"
+            color="primary"
+            type="submit"
+            style={{ float:"right",marginTop: "20px", width: "100px",padding:"1px 1px 1px 1px" }}
+          >
+            <a>Save Draft</a>
+          </Button>
+          <br></br>
+          <Divider></Divider>
+          <br></br>
+        <InputBase
+        className={classes.margin}
+        placeholder="Title"
+        fullWidth
+        inputProps={{ style: {fontSize: 50},'aria-label': 'naked' }}
+      />
+        <br></br>
+        <br></br>
+        <br></br>
+        <TextField
+        height="60"
+          id="filled-textarea"
+          placeholder="Write Your Story here....."
+          multiline
+          fullWidth
+          inputProps={{style: {fontSize: 30,height:10000,lineHeight:1}}}
+        />
+        
+        </form>
+        </ThemeProvider>
       </TabPanel>
       <TabPanel value={value} index={3}>
         Item Four
@@ -162,6 +224,14 @@ Though we hope that we never have to invoke this policy, we believe that having 
           </Button></Link></center>
       </TabPanel>
       <style jsx>{`
+      
+      #b InputBase{
+        font-size:100px;
+      }
+      textField: {
+        width: 400;
+        margin: 100;
+      } 
       #but{
           align-items:center;
       }
