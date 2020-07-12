@@ -46,7 +46,7 @@ export default function Home() {
             <p>Start your Blog Journey today!</p>
           </a></Link>
           <a href="/posts/four-post" className="card">
-            <h3>Contributor's Section &rarr;</h3>
+            <h3>Contributors' Section &rarr;</h3>
             <p>The people without whom this page would have been impossible</p>
           </a>
           </div>
