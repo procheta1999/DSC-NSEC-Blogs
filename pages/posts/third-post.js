@@ -16,6 +16,7 @@ import Box from '@material-ui/core/Box';
 import Button from "@material-ui/core/Button"
 import Head from "next/head"
 import Link from 'next/link'
+import { blue } from '@material-ui/core/colors';
 const theme = createMuiTheme({
   form:{
     InputBase: {
@@ -98,13 +99,13 @@ export default function ScrollableTabsButtonAuto() {
           aria-label="scrollable auto tabs example"
         >
             <img src="/dsc.png" alt="dsc Logo" className="logo" />
-          <Tab label="My feed" {...a11yProps(1)} />
-          <Tab label="Publish" {...a11yProps(2)} />
-          <Tab label="Starred items" {...a11yProps(3)} />
-          <Tab label="My account" {...a11yProps(4)} />
-          <Tab label="Stories" {...a11yProps(5)} />
-          <Tab label="Settings" {...a11yProps(6)} />
-          <Tab label="Log out" {...a11yProps(7)} />
+          <Tab label="My feed📃" {...a11yProps(1)} />
+          <Tab label="Publish🖋" {...a11yProps(2)} />
+          <Tab label="Starred items⭐" {...a11yProps(3)} />
+          <Tab label="My account🙋‍♀️🙋‍♂️" {...a11yProps(4)} />
+          <Tab label="Notifications🔔" {...a11yProps(5)} />
+          <Tab label="Settings⚙" {...a11yProps(6)} />
+          <Tab label="Log out📤" {...a11yProps(7)} />
          
         </Tabs>
       </AppBar>
@@ -155,7 +156,13 @@ Though we hope that we never have to invoke this policy, we believe that having 
         </Typography>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        
+      <h1 className="title">
+      DSC NSEC BLOGS-<i id="s">Write Your Own Story!</i>
+      </h1>
+      <Typography variant="h4" gutterBottom style={{ textAlign: "center" }}>
+        Start blogging today! ✒📝Share your stories📚, your experiences! 🙋‍♀️Did you get success at one throw 🤔or was it hard? Tell us your stories.✨We would love to hear them. 📖 
+        </Typography>
       </TabPanel>
       <TabPanel value={value} index={2}>
         <br></br>
@@ -202,7 +209,9 @@ Though we hope that we never have to invoke this policy, we believe that having 
         </ThemeProvider>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        Item Four
+        <div id="e">
+         Starred Stories ⭐
+        </div>
       </TabPanel>
       <TabPanel value={value} index={4}>
         Item Five
@@ -224,6 +233,37 @@ Though we hope that we never have to invoke this policy, we believe that having 
           </Button></Link></center>
       </TabPanel>
       <style jsx>{`
+      .title {
+        text-align:center;
+        margin: 0;
+        line-height: 1.15;
+        font-size: 4rem;
+        padding: 3rem 3rem 3rem 3rem;
+      }
+      #s{
+        animation: pulse 5s infinite;
+      }
+      @keyframes pulse {
+        20% {
+          color: red;
+        }
+        30%{
+            color:blue; 
+        }
+        40%{
+            color:green;
+        }
+        100% {
+          color: yellow;
+        }
+      }
+      #e{
+        font-size:40px;
+      }
+      #pro{
+        color:blue;
+      }
+      
       
       #b InputBase{
         font-size:100px;
@@ -235,6 +275,20 @@ Though we hope that we never have to invoke this policy, we believe that having 
       #but{
           align-items:center;
       }
+      `}</style>
+      <style jsx global>{`
+        html,
+        body {
+          padding: 0;
+          margin: 0;
+          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+            sans-serif;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
       `}</style>
     </div>
   );
