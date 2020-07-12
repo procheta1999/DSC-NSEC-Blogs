@@ -45,6 +45,11 @@ export default function Home() {
             <h3>Log In &rarr;</h3>
             <p>Start your Blog Journey today!</p>
           </a></Link>
+          <a href="/posts/four-post" className="card">
+            <h3>Contributor's Section &rarr;</h3>
+            <p>The people without whom this page would have been impossible</p>
+          </a>
+          </div>
           <br></br>
         <br></br>
         <br></br>
@@ -56,7 +61,6 @@ export default function Home() {
         <Link href="https://twitter.com/dscnsec"><a target="_blank"><Icon className="fa fa-twitter" /></a></Link>
         <Link href="https://ig.me/dscnsec"><a target="_blank"><Icon className="fa fa-instagram" /></a></Link>
         <Link href="https://github.com/dscnsec"><a target="_blank"><Icon className="fa fa-github" /></a></Link>
-        </div>
         </div>
 
       </main>
