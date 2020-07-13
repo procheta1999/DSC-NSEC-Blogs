@@ -45,7 +45,14 @@ export default function FirstPost() {
           </div>
           </div>
           <p id="new"><Link href="/posts/second-post"><a>New user?Sign up</a></Link></p>
-          <p id="new"><Link href="/"><a>Back to HomePage</a></Link></p>
+          <center><Link href="/"><Button
+            variant="contained"
+            color="primary"
+            type="submit"
+            style={{ marginTop: "20px", width: "100px" }}
+          >
+            <a>HomePage🏠</a>
+          </Button></Link></center>
       </form>
       
       </Paper>
@@ -133,6 +140,7 @@ export default function FirstPost() {
       }
       .logo {
         height: 1em;
+        float:left;
       }
       .title {
         margin: 0;

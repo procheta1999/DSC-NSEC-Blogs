@@ -21,6 +21,8 @@ export default function SecondPost() {
       <h1 className="title">
         <img src="/dsc.png" alt="dsc Logo" className="logo"/>
           <b>DSC NSEC BLOGS-<i id="s">Write Your Own Story!</i></b>
+          <br></br>
+          <br></br>
         </h1>
         <Typography variant="h2" gutterBottom style={{ textAlign: "center" }}>
         Sign Up To Start Your Journey Today!
@@ -43,7 +45,14 @@ export default function SecondPost() {
           </Button>
           </div>
           </div>
-          <p id="new"><Link href="/"><a>Back to HomePage</a></Link></p>
+          <center><Link href="/"><Button
+            variant="contained"
+            color="primary"
+            type="submit"
+            style={{ marginTop: "20px", width: "100px" }}
+          >
+            <a>HomePage🏠</a>
+          </Button></Link></center>
           <p id="new"><Link href="/posts/first-post"><a>Already have an account?Log In</a></Link></p>
       </form>
       
@@ -53,7 +62,7 @@ export default function SecondPost() {
 <script defer src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
 <script defer src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
 
-// ...
+
 
 <script defer src="./firebase.js"></script>
       </main>
@@ -119,12 +128,12 @@ export default function SecondPost() {
 
       .card h3 {
         margin: 0 0 1rem 0;
-        font-size: 1.5rem;
+        font-size: 1 rem;
       }
 
       .card p {
         margin: 0;
-        font-size: 1.25rem;
+        font-size: 1rem;
         line-height: 1.5;
       }
       #l{
@@ -132,12 +141,12 @@ export default function SecondPost() {
       }
       .logo {
         height: 1em;
+        float:left;
       }
       .title {
         margin: 0;
-        line-height: 1.15;
+        line-height: 1.1;
         font-size: 4rem;
-        padding: 5rem 0;
       }
       #s{
         animation: pulse 5s infinite;
