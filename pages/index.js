@@ -17,34 +17,87 @@ export default function Home() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <title>DSC NSEC blogs!</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"></link>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
       </Head>
 
       <main>
         
-        <h1 className="title">
-        <img src="/dsc.png" alt="dsc Logo" className="logo" />
-          DSC NSEC BLOGS-<i id="s">Write Your Own Story!</i>
+      <h1 className="title">
+        <img src="/dsc.png" alt="dsc Logo" className="logo"/>
+          <b>DSC NSEC BLOGS-<i id="s">Write Your Own Story!</i></b>
         </h1>
         <br></br>
         <br></br>
         <p className="description">
           We, at DSC NSEC, believe that everyone has a unique story to tell to the world- a story about them,how they reached success, how they never gave up, what challenges did they face, what was the final outcome. So we can came up with our blog platform <i id="pro">DSC NSEC blogs!</i> to help reach your stories to the world, to encourage more people in their journey. So, let's start writing !
         </p>
-        <img src="/book.jpg" alt="blog" id="book" />
-        <br></br>
-        <img src="/create.jpg" alt="blog" id="create" />
         
+        
+        <br></br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+
+      <div class="item active">
+      <div id="pr24">
+        <Icon className="fa fa-quote-left fa-5x fa-pull-left" aria-hidden="true"/>
+       <div id="pr2"> <i>Start writing, no matter what. The water does not flow until the faucet is turned on.</i></div>
+        <Icon className="fa fa-quote-right fa-5x fa-pull-right" aria-hidden="true"/>
+        -Louis L’Amour
+        </div>
+      </div>
+
+      <div class="item">
+      <div id="pr1">
+        <Icon className="fa fa-quote-left fa-5x fa-pull-left" aria-hidden="true"/>
+       <div id="pr2"> <i>Write what should not be forgotten</i></div>
+        <Icon className="fa fa-quote-right fa-5x fa-pull-right" aria-hidden="true"/>
+        -Isabel Allende
+        </div>
+      </div>
+    
+      <div class="item">
+      <div id="pr34">
+        <Icon className="fa fa-quote-left fa-5x fa-pull-left" aria-hidden="true"/>
+       <div id="pr2"> <i>The first draft is just you telling yourself the story.</i></div>
+        <Icon className="fa fa-quote-right fa-5x fa-pull-right" aria-hidden="true"/>
+        -Terry Pratchett
+        </div>
+      </div>
+  
+    </div>
+
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+        <br></br>
         <div className="grid">
+        <img src="/dsc.png" alt="blog" id="book1" />
           <a href="https://dscnsec.com/" className="card">
             <h3>About us &rarr;</h3>
             <p>We are Developer Student Club of Netaji Subhash Engineering College, New Garia, Kolkata.</p>
           </a>
-
+        
           <Link href="/posts/first-post"><a className="card">
             <h3>Log In &rarr;</h3>
             <p>Start your Blog Journey today!</p>
           </a></Link>
+          <img src="/book.jpg" alt="blog" id="book" />
+          <br></br>
+          <img src="/create.jpg" alt="blog" id="book" />
           <a href="/posts/four-post" className="card">
             <h3>Contributors' Section &rarr;</h3>
             <p>The people without whom this page would have been impossible</p>
@@ -77,6 +130,43 @@ export default function Home() {
       </footer>
 
       <style jsx>{`
+       #book1{
+        float:left;
+    height:50%;
+    width:50%;
+      }
+      #pr34{
+        padding:2em 2em 2em 2em;
+        font-size:20px;
+        font-family: Optimus Princeps;
+        background-image:url("/light.jpg");
+        background-width:25%;
+        background-height:25%;
+        color:white;
+    }
+      #pr24{
+        padding:2em 2em 2em 2em;
+        font-size:20px;
+        font-family: Optimus Princeps;
+        background-image:url("/bulb.jpg");
+        background-width:25%;
+        background-height:25%;
+        color:black;
+    }
+      #pr2{
+        padding:1em 1em 1em 1em;
+        font-size:40px;
+        
+    }
+      #pr1{
+        padding:2em 2em 2em 2em;
+        font-size:20px;
+        font-family: Optimus Princeps;
+        background-image:url("/books.jpg");
+        background-width:50%;
+        background-height:50%;
+        color:white;
+    }
       #pr{
         padding:1em 1em 1em 1em;
     }
@@ -91,11 +181,9 @@ export default function Home() {
     width:600px;
       }
       #book{
-        display: block;
-    margin-left: auto;
-    margin-right: auto ;
-    height:300px;
-    width:300px;
+        float:right;
+    height:50%;
+    width:50%;
       }
         .container {
           min-height: 100vh;
@@ -138,6 +226,11 @@ export default function Home() {
           color: inherit;
           text-decoration: none;
         }
+        .title {
+          margin: 0;
+          line-height: 1.15;
+          font-size: 4rem;
+        }
 
         .title a {
           color: #0070f3;
@@ -150,12 +243,6 @@ export default function Home() {
           text-decoration: underline;
         }
 
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
         .title,
         .description {
           text-align: center;
@@ -163,7 +250,7 @@ export default function Home() {
 
         .description {
           line-height: 1.5;
-          font-size: 1.5rem;
+          font-size: 3rem;
         }
 
         code {
@@ -206,17 +293,19 @@ export default function Home() {
 
         .card h3 {
           margin: 0 0 1rem 0;
-          font-size: 1.5rem;
+          font-size: 2rem;
         }
 
         .card p {
           margin: 0;
-          font-size: 1.25rem;
+          font-size: 2rem;
           line-height: 1.5;
         }
 
         .logo {
-          height: 1em;
+          height: 1.5em;
+          float:left;
+          margin-right:1em
         }
 
         @media (max-width: 600px) {
