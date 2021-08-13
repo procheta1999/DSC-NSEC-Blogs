@@ -14,7 +14,7 @@
     "child_process": "^1.0.2",
     "dotenv": "^8.2.0",
     "firebase": "^7.15.5",
-    "next": "9.4.4",
+    "next": "11.1.0",
     "node-firestore-import-export": "^1.1.0",
     "now": "^19.1.1",
     "now-secrets": "^1.0.3",
